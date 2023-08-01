@@ -4,3 +4,4 @@ def index_power(numbers, n):
 # print(index_power([1,3 ,10,100], 3)) 
 # print(index_power([1,2,3,4], 2))
 # print(index_power([1,2], 3))
+# come to edit because i signed in the wrong account TT-TT
