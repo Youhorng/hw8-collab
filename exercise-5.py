@@ -1,14 +1,18 @@
 def reverse_ascending(numbers):
     result = []
-    start = 0
-    end = 0
+    subsequence = []
 
-    for i in range(len(numbers) - 1):
-        if numbers[i] >= numbers[i + 1] and start != end:
-            result.extend(numbers[end:start - 1:-1])
-            start = end + 1
-            end = i + 1
-        if start != end:
-            result.extend(numbers[end:start - 1:-1])
+    for i in range(len(numbers)):
+        if i == 0 or numbers[i] > numbers[i-1]:
+            subsequence.append(numbers[i])
+        else:
+            result.extend(subsequence[::-1])
+            subsequence = [numbers[i]]
+
+    result.extend(subsequence[::-1])
+
     return result
 
+list = [5, 7, 10, 4, 2, 7, 8, 1, 3]
+result = reverse_ascending(list)
+print(result)
